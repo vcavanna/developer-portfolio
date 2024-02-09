@@ -15,7 +15,7 @@ export const greetings: GreetingsType = {
   name: "Vincent Cavanna",
   title: "Hi all, I'm Vincent",
   description:
-    "I'm a software engineer with experience in web design, cloud infrastructure, and data. In addition to my technical experience, I'm also a passionate communicator, with work experience in public speaking, and cultivating meaningful relationships. If you'd like to talk, send me an email! I am always looking for the opportunity to learn more! My greatest interest is enabling others to grow right along with me!",
+    "I'm a software engineer with experience in web design, cloud infrastructure, and data. In addition to my technical experience, I'm also a skilled communicator, with work experience in public speaking and a passion for cultivating meaningful relationships. If you'd like to talk, send me an email! I am always looking for the opportunity to learn more! My greatest interest is enabling others to grow right along with me!",
   resumeLink: "https://drive.google.com/file/d/1cL76R_VfPZSwpostg0flWjkd6mwLzdIC/view?usp=sharing",
 };
 
