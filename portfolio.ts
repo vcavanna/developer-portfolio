@@ -12,39 +12,39 @@ import {
 } from "./types/sections";
 
 export const greetings: GreetingsType = {
-  name: "Hanzla Tauqeer",
-  title: "Hi all, I'm Hanzla",
+  name: "Vincent Cavanna",
+  title: "Hi all, I'm Vincent",
   description:
-    "I'm a passionate Full Stack web developer with experience developing Full Stack web applications with Python, Django, React.js, and Cloud Technologies. I am strongly interested in learning new technologies and implementing them in my projects. I'm a self-motivated and hardworking individual who is always ready to learn new things and work in a team.",
-  resumeLink: "#",
+    "I'm a software engineer with experience in web design, cloud infrastructure, and data. In addition to my technical experience, I'm also a passionate communicator, with work experience in public speaking, and cultivating meaningful relationships. If you'd like to talk, send me an email! I am always looking for the opportunity to learn more! My greatest interest is enabling others to grow right along with me!",
+  resumeLink: "https://drive.google.com/file/d/1cL76R_VfPZSwpostg0flWjkd6mwLzdIC/view?usp=sharing",
 };
 
 export const openSource = {
-  githubUserName: "1hanzla100",
+  githubUserName: "vcavanna",
 };
 
 export const contact = {};
 
 export const socialLinks: SocialLinksType = {
-  email: "mailto:hanzla.tauqeer123@gmail.com",
-  linkedin: "https://www.linkedin.com/in/1hanzla100/",
-  github: "https://github.com/1hanzla100",
-  instagram: "https://www.instagram.com/__hanzla100",
-  // facebook: 'https://www.facebook.com/1hanzla100',
-  // twitter: 'https://twitter.com/1hanzla100',
+  email: "mailto:vin100.cav@gmail.com",
+  linkedin: "https://www.linkedin.com/in/vincent-cavanna/",
+  github: "https://github.com/vcavanna",
+  // instagram: "#!",
+  // facebook: 'https://www.facebook.com/1Vincent100',
+  // twitter: 'https://twitter.com/1Vincent100',
 };
 
 export const skillsSection: SkillsSectionType = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "I love to do anything from data wrangling and analysis to cloud solutions and web design!",
   data: [
     {
       title: "Full Stack Development",
       lottieAnimationFile: "/lottie/skills/fullstack.json", // Path of Lottie Animation JSON File
       skills: [
-        emoji("⚡ Building responsive Single-Page-Apps (SPA) & PWA in React.js"),
-        emoji("⚡ Building responsive static websites using Next.js"),
-        emoji("⚡ Building RESTful APIs in Django & Django REST Framework"),
+        emoji("⚡ Building websites in React.js"),
+        emoji("⚡ Building data wrangling scripts and ETL jobs in Python and Scala"),
+        emoji("⚡ Building cloud architecture from the ground up using my own designs"),
       ],
       softwareSkills: [
         {
@@ -52,37 +52,60 @@ export const skillsSection: SkillsSectionType = {
           iconifyTag: "logos:python",
         },
         {
-          skillName: "Django",
-          iconifyTag: "vscode-icons:file-type-django",
-        },
-        {
           skillName: "JavaScript",
           iconifyTag: "logos:javascript",
         },
         {
-          skillName: "Reactjs",
-          iconifyTag: "vscode-icons:file-type-reactjs",
-        },
-        {
-          skillName: "Nextjs",
-          iconifyTag: "vscode-icons:file-type-light-next",
+          skillName: "Java",
+          iconifyTag: "logos:java",
         },
         {
           skillName: "AWS",
           iconifyTag: "logos:aws",
         },
         {
-          skillName: "Heroku",
-          iconifyTag: "logos:heroku-icon",
-        },
-        {
           skillName: "Github",
           iconifyTag: "akar-icons:github-fill",
         },
         {
-          skillName: "Docker",
-          iconifyTag: "logos:docker-icon",
+          skillName: "SQL",
+          iconifyTag: "devicon:mysql",
         },
+        {
+          skillName: "Tableau",
+          iconifyTag: "logos:tableau-icon",
+        },
+      ],
+    },
+    {
+      title: "Communication and Leadership",
+      lottieAnimationFile: "/lottie/skills/publicSpeaking.json", // Path of Lottie Animation JSON File
+      skills: [
+        emoji("⚡ Teaching and practicing public speaking skills"),
+        emoji("⚡ Writing guides and documentation to support others"),
+        emoji("⚡ Giving feedback through mentorship programs and peer support groups"),
+      ],
+      softwareSkills: [
+        {
+          skillName: "Public Speaking",
+          iconifyTag: "mingcute:speech-fill",
+        },
+        {
+          skillName: "Writing",
+          iconifyTag: "oi:copywriting",
+        },
+        {
+          skillName: "Feedback",
+          iconifyTag: "codicon:feedback",
+        },
+        {
+          skillName: "Collaboration",
+          iconifyTag: "fluent-mdl2:teamwork",
+        },
+        {
+          skillName: "Analysis",
+          iconifyTag: "ep:data-analysis",
+        }
       ],
     },
   ],
@@ -90,12 +113,12 @@ export const skillsSection: SkillsSectionType = {
 
 export const SkillBars: SkillBarsType[] = [
   {
-    Stack: "Frontend/Design", //Insert stack or technology you have experience in
-    progressPercentage: "85", //Insert relative proficiency in percentage
-  },
-  {
     Stack: "Backend",
     progressPercentage: "90",
+  },
+  {
+    Stack: "Frontend/Design", //Insert stack or technology you have experience in
+    progressPercentage: "70", //Insert relative proficiency in percentage
   },
   {
     Stack: "Programming",
@@ -105,109 +128,120 @@ export const SkillBars: SkillBarsType[] = [
 
 export const educationInfo: EducationType[] = [
   {
-    schoolName: "University of Central Punjab",
-    subHeader: "Bachelor of Science in Computer Science",
-    duration: "September 2017 - April 2020",
+    schoolName: "University of Dallas",
+    subHeader: "Bachelor of Arts in Computer Science",
+    duration: "September 2019 - May 2023",
     desc: "",
-    grade: "Grade A",
-    descBullets: [], // Array of Strings
+    // grade: "Grade A",
+    descBullets: [
+      "Vice President of Association for Computing Machinery chapter for two years",
+      "Awarded Dean's list six times",
+      "Awarded Computer Science Departmental Scholarship",
+      "Awarded National Merit Scholar",
+      "Awarded Resident Assistant of the Year"
+    ], // Array of Strings
   },
 ];
 
 export const experience: ExperienceType[] = [
   {
-    role: "Django Developer",
-    company: "Meganos Software",
-    companyLogo: "/img/icons/common/meganos.png",
-    date: "Aug 2022 - Present",
-    desc: "I crafted backends for diverse web apps, APIs, and WebSockets in e-commerce, podcasts, and property management. Managed server upkeep, deployments on Linux, Heroku, and AWS S3. Implemented PyTest for automated unit and integration testing, slashing 4 hours of manual testing each sprint, fortifying a dependable and flawless code foundation.",
+    role: "Independent Contractor",
+    company: "Ace",
+    companyLogo: "/img/icons/common/ace_logo.jpeg",
+    date: "June 2023 - July 2023",
+    desc: "I worked as the point person for resolving warehouse issues, analyzed for process improvements, and fulfilled orders.",
   },
   {
-    role: "Full Stack Developer",
-    company: "Duseca Software",
-    companyLogo: "/img/icons/common/duseca_software_logo.jpeg",
-    date: "Jan 2022 - Sept 2023",
-    desc: "Crafted robust mobile application backends employing Django, Python, and REST APIs. Leveraged Django REST Framework, PostgreSQL, AWS, Firebase, Stripe, and WebSocket for efficient development. Collaborated across teams to surpass client expectations. Designed intuitive UIs, empowering clients to effortlessly manage their applications with a visually captivating interface.",
-    // descBullets: [
-    // 	"Lorem ipsum dolor sit amet, consdfgectetur adipiscing elit",
-    // 	"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    // ],
+    role: "Resident Assistant",
+    company: "University of Dallas",
+    companyLogo: "/img/icons/common/university_of_dallas_logo.jpeg",
+    date: "August 2022 - May 2023",
+    desc: "I supported the resident community across all functions, from administration to engagements",
+    descBullets: [
+      "Planned, promoted, and executed 20+ events to increase cross campus engagement",
+      "Responded to resident issues and communicated to residence life leaders",
+      "Initiated campus beautification efforts"
+    ]
   },
   {
-    role: "Full Stack Developer",
-    company: "ZRTechnologies",
-    companyLogo: "/img/icons/common/zrtech.jpeg",
-    date: "Aug 2022 - Jun 2023",
-    desc: "Crafting diverse web applications, I've elevated functionality and user engagement. Spearheaded Visual Portfolio, leveraging AI for captivating presentations from parsed text. Proficiently set up and optimized applications on Linux servers, guaranteeing smooth scalability and top-notch performance for seamless user experiences.",
+    role: "Software Engineer Intern",
+    company: "Amazon",
+    companyLogo: "/img/icons/common/amazon_logo.jpeg",
+    date: "May 2022 - August 2022",
+    desc: "I designed a robust ETL job to process 6 millions of logs a second into analytics services",
+    descBullets: [
+    	"I built this design out using AWS, Java, Spark, Python, and command line tools.",
+    	"My six-page high-level design document passed peer review in one try",
+    ],
   },
   {
-    role: "Backend Developer",
-    company: "Bleed-AI",
-    companyLogo: "/img/icons/common/bleedAI.jpg",
-    date: "Sept 2021 - Oct 2021",
-    desc: "As a Django developer at Bleed AI, I integrated a computer vision AI model to process YouTube URLs on a website. I used Django Channels and Websockets to show real-time processing and implemented threading to run multiple instances of the AI model. I also used jQuery for UI rendering and deployed the website on a Heroku server.",
+    role: "Web & Tech Team Leader",
+    company: "National STEM Honor Society",
+    companyLogo: "/img/icons/common/national_stem_honor_society_logo.jpeg",
+    date: "May 2021 - August 2021",
+    desc: "I managed a team of 5 in making improvements to the Wordpress website.",
+    descBullets: [
+      "I created HTML and CSS pages and adopted new technologies to improve the website",
+      "I set strategic goals for the redesign of the website, presenting to the entire organization",
+      "I onboarded and provided feedback to each member of my team"
+    ]
+  },
+  {
+    role: "Head Team Policy Debate Coach",
+    company: "Zenith Speech and Debate Academy",
+    companyLogo: "/img/icons/common/zenithLogo.png",
+    date: "May 2021 - August 2021",
+    desc: "I managed a team of 6, taught 40 students speech and debate, and created +60 pages of research documents",
+    descBullets: [
+      "I taught critical thinking and public speaking skills to groups of +20 students in summer camps",
+      "I managed the camp schedule and ensured satisfaction across the student body",
+      "I mentored the junior coaches in leadership skills and provided feedback across the organization"
+    ]
   },
 ];
 
 export const projects: ProjectType[] = [
   {
-    name: "developer-portfolio",
-    desc: "Software Developer Portfolio Template built with react.js and next.js bootstrap that helps you showcase your work and skills as a software developer.",
-    github: "https://github.com/1hanzla100/developer-portfolio",
-    link: "https://developer-portfolio-1hanzla100.vercel.app/",
+    name: "Scraping Edmunds Site",
+    desc: "A data engineering project based in the cloud to extract and analyze ecommerce entries from car websites",
+    github: "https://github.com/vcavanna/scrapers",
+    // link: "https://developer-portfolio-1Vincent100.vercel.app/",
   },
   {
-    name: "Giebo",
-    desc: "A Podcast Platform where creators can easily publish and sell their podcasts, and users can purchase with Handcash BitcoinSV, the future of fast and secure transactions.",
-    link: "https://gibeo.io/",
+    name: "Forum 56 Networking Platform",
+    desc: "A networking and development platform where liberal arts students and alumni can form strong professional relationships.",
+    github: "https://github.com/vcavanna/forum56",
+    // link: "https://gibeo.io/",
   },
   {
-    name: "O Mejor Oferta",
-    desc: "O Mejor Oferta is a mobile marketplace for buying and selling items nearby, helping users find deals on things they want and make money from items they no longer need.",
-    link: "https://play.google.com/store/apps/details?id=com.duseca.mejor_oferta",
+    name: "Automating Data Entry on Unilog Platform",
+    desc: "Software to automate a data entry task that takes weeks of analysts time, built using Python and the pandas library.",
+    github: "https://github.com/vcavanna/vendor-to-unilog-poc",
   },
   {
-    name: "Hooligan Culture",
-    desc: "A Ecommerce Platform, where shopping meets the future! With HandCash BitcoinSV integration, you can authenticate and purchase products with ease and confidence.",
-    link: "https://hooliganculture.com/",
+    name: "IOT Device for Student Attendance",
+    desc: "Developed the backend database and REST API together with frontend and device teams",
+    github: "https://github.com/vcavanna/studentAttendanceMiddleware",
   },
 ];
 
 export const feedbacks: FeedbackType[] = [
-  {
-    name: "Syed Jamal",
-    role: "Frontend Developer at Meganos Software",
-    feedback:
-      "You were a wonderful addition to our team, alhumdulillah. I'm quite impressed with your abilities and professional practices. You approach problems from a unique perspective and always ask the right question. Finding a good teammate like Hanzla is extremely difficult. He has contributed to the growth of our organization and continues to do so. May Allah bless you with everything you desire.",
-  },
-  {
-    name: "Wajahat Malek",
-    role: "CEO at Duseca Software",
-    feedback:
-      "Hanzla has a deep understanding of web development technologies and is adept at using them to build scalable, robust, and secure web applications. He has worked on various projects, ranging from small-scale to large-scale, and has shown his ability to work collaboratively with others while maintaining a high level of productivity and quality. Hanzla is a pleasure to work with, and I have no doubt that he will be an asset to any team or organization. I highly recommend Hanzla for any Full Stack Django, React.js, or Blockchain development projects, and I wish him all the best in his future endeavors.",
-  },
-  {
-    name: "Zaid Zaffar",
-    role: "CEO at ZR Technologies",
-    feedback:
-      "Very skilled at what he does and has an in depth knowledge of Django and he's always ready to handle any challenges thrown at him. He's been a valuable member of my team and i look forward to working with him in the years to come",
-  },
 ];
 
 // See object prototype on /types/section.ts page
 export const seoData: SEODataType = {
-  title: "Hanzla Tauqeer",
+  title: "Vincent Cavanna",
   description: greetings.description,
-  author: "Hanzla Tauqeer",
+  author: "Vincent Cavanna",
   image: "https://avatars.githubusercontent.com/u/59178380?v=4",
-  url: "https://developer-portfolio-1hanzla100.vercel.app",
+  url: "https://developer-portfolio-1Vincent100.vercel.app",
   keywords: [
-    "Hanzla",
-    "Hanzla Tauqeer",
-    "@1hanzla100",
-    "1hanzla100",
+    "Vincent",
+    "Vincent Cavanna",
+    "@1Vincent100",
+    "1Vincent100",
     "Portfolio",
-    "Hanzla Portfolio ",
-    "Hanzla Tauqeer Portfolio",
+    "Vincent Portfolio ",
+    "Vincent Cavanna Portfolio",
   ],
 };
