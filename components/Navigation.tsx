@@ -25,6 +25,11 @@ const Navigation = () => {
                 {greetings.name}
               </h2>
             </NavbarBrand>
+            <NavbarBrand href="/blog">
+              <h2 className="text-white" id="nav-title">
+                Blog
+              </h2>
+            </NavbarBrand>
             <button className="navbar-toggler" aria-label="navbar_toggle" id="navbar_global">
               <span className="navbar-toggler-icon" />
             </button>

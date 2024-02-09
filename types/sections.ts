@@ -87,3 +87,13 @@ export type FeedbackType = {
   role: string;
   feedback: string;
 };
+
+// * BLOG SECTION
+
+export type BlogType = {
+  title: string;
+  intro: string;
+  image_url: string;
+  link: string;
+  date: Date;
+}

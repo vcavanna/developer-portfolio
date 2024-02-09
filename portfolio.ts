@@ -39,7 +39,7 @@ export const skillsSection: SkillsSectionType = {
   subTitle: "I love to do anything from data wrangling and analysis to cloud solutions and web design!",
   data: [
     {
-      title: "Full Stack Development",
+      title: "Software Development",
       lottieAnimationFile: "/lottie/skills/fullstack.json", // Path of Lottie Animation JSON File
       skills: [
         emoji("⚡ Building websites in React.js"),
