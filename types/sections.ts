@@ -19,7 +19,6 @@ export type GreetingsType = {
   name: string;
   title: string;
   description?: string;
-  resumeLink?: string;
 };
 
 // * SKILLS SECTION
@@ -31,7 +30,6 @@ type SoftwareSkillType = {
 
 type SkillType = {
   title: string;
-  lottieAnimationFile: string;
   skills: React.ReactNode[] | string[];
   softwareSkills: SoftwareSkillType[];
 };
@@ -47,28 +45,6 @@ export type SkillsSectionType = {
 export type SkillBarsType = {
   Stack: string;
   progressPercentage: string;
-};
-
-// * EDUCATION SECTION
-
-export type EducationType = {
-  schoolName: string;
-  subHeader: string;
-  duration: string;
-  desc: string;
-  grade?: string;
-  descBullets?: string[];
-};
-
-// * EXPERIENCE SECTION
-
-export type ExperienceType = {
-  role: string;
-  company: string;
-  companyLogo: string;
-  date: string;
-  desc: string;
-  descBullets?: string[];
 };
 
 // * PROJECT SECTION

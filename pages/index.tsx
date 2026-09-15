@@ -2,7 +2,7 @@ import Link from "next/link";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import SEO from "../components/SEO";
-import { greetings, socialLinks } from "../portfolio";
+import { greetings } from "../portfolio";
 
 export default function Home() {
   return (
@@ -21,16 +21,6 @@ export default function Home() {
           <a className="home__action" href="/blog">
             Read the blog
           </a>
-          {greetings.resumeLink && (
-            <a className="home__action" href={greetings.resumeLink} rel="noopener noreferrer" target="_blank">
-              Resume
-            </a>
-          )}
-          {socialLinks.email && (
-            <a className="home__action" href={socialLinks.email}>
-              Get in touch
-            </a>
-          )}
         </div>
       </main>
       <Footer />

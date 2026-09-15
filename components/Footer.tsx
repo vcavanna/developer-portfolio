@@ -5,12 +5,6 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <span>&copy; {new Date().getFullYear()} Vincent Cavanna</span>
-      {socialLinks.email && (
-        <>
-          {" · "}
-          <a href={socialLinks.email}>Email</a>
-        </>
-      )}
       {socialLinks.github && (
         <>
           {" · "}

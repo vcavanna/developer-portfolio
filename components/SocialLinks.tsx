@@ -2,7 +2,6 @@ import React from "react";
 import { socialLinks } from "../portfolio";
 
 const links = [
-  { key: "email", href: socialLinks.email, label: "Email", icon: "fa fa-envelope" },
   { key: "linkedin", href: socialLinks.linkedin, label: "Linkedin", icon: "fa fa-linkedin" },
   { key: "github", href: socialLinks.github, label: "Github", icon: "fa fa-github" },
   { key: "instagram", href: socialLinks.instagram, label: "Instagram", icon: "fa fa-instagram" },
@@ -22,7 +21,7 @@ const SocialLinks = ({ onDark = false }: { onDark?: boolean }) => {
             href={link.href}
             aria-label={link.label}
             rel="noopener noreferrer"
-            target={link.key === "email" ? undefined : "_blank"}
+            target="_blank"
           >
             <i className={link.icon} aria-hidden="true" />
           </a>
