@@ -1,94 +1,32 @@
 import React from "react";
-import { Button } from "reactstrap";
 import { socialLinks } from "../portfolio";
 
-const SocialLinks = () => {
+const links = [
+  { key: "email", href: socialLinks.email, label: "Email", icon: "fa fa-envelope" },
+  { key: "linkedin", href: socialLinks.linkedin, label: "Linkedin", icon: "fa fa-linkedin" },
+  { key: "github", href: socialLinks.github, label: "Github", icon: "fa fa-github" },
+  { key: "instagram", href: socialLinks.instagram, label: "Instagram", icon: "fa fa-instagram" },
+  { key: "facebook", href: socialLinks.facebook, label: "Facebook", icon: "fa fa-facebook-square" },
+  { key: "twitter", href: socialLinks.twitter, label: "Twitter", icon: "fa fa-twitter" },
+];
+
+const SocialLinks = ({ onDark = false }: { onDark?: boolean }) => {
   return (
-    <div className="btn-wrapper text-lg">
-      {socialLinks.email && (
-        <Button
-          className="btn-icon-only rounded-circle ml-1"
-          color="white"
-          rel="noopener"
-          aria-label="URL"
-          href={socialLinks.url}
-          target="_blank"
-        >
-          <span className="btn-inner--icon">
-            <i className="fa fa-envelope" />
-          </span>
-        </Button>
-      )}
-      {socialLinks.linkedin && (
-        <Button
-          className="btn-icon-only rounded-circle ml-1"
-          color="twitter"
-          rel="noopener"
-          aria-label="Linkedin"
-          href={socialLinks.linkedin}
-          target="_blank"
-        >
-          <span className="btn-inner--icon">
-            <i className="fa fa-linkedin" />
-          </span>
-        </Button>
-      )}
-      {socialLinks.github && (
-        <Button
-          className="btn-icon-only rounded-circle ml-1"
-          color="github"
-          href={socialLinks.github}
-          rel="noopener"
-          aria-label="Github"
-          target="_blank"
-        >
-          <span className="btn-inner--icon">
-            <i className="fa fa-github" />
-          </span>
-        </Button>
-      )}
-      {socialLinks.instagram && (
-        <Button
-          className="btn-icon-only rounded-circle ml-1"
-          color="instagram"
-          href={socialLinks.instagram}
-          target="_blank"
-          rel="noopener"
-          aria-label="Instagram"
-        >
-          <span className="btn-inner--icon">
-            <i className="fa fa-instagram" />
-          </span>
-        </Button>
-      )}
-      {socialLinks.facebook && (
-        <Button
-          className="btn-icon-only rounded-circle ml-1"
-          color="facebook"
-          href={socialLinks.facebook}
-          target="_blank"
-          rel="noopener"
-          aria-label="Facebook"
-        >
-          <span className="btn-inner--icon">
-            <i className="fa fa-facebook-square" />
-          </span>
-        </Button>
-      )}
-      {socialLinks.twitter && (
-        <Button
-          className="btn-icon-only rounded-circle"
-          color="twitter"
-          href={socialLinks.twitter}
-          target="_blank"
-          rel="noopener"
-          aria-label="Twitter"
-        >
-          <span className="btn-inner--icon">
-            <i className="fa fa-twitter" />
-          </span>
-        </Button>
-      )}
+    <div className={`social-links${onDark ? " social-links--on-dark" : ""}`}>
+      {links
+        .filter(link => link.href)
+        .map(link => (
+          <a
+            key={link.key}
+            className="social-links__item"
+            href={link.href}
+            aria-label={link.label}
+            rel="noopener noreferrer"
+            target={link.key === "email" ? undefined : "_blank"}
+          >
+            <i className={link.icon} aria-hidden="true" />
+          </a>
+        ))}
     </div>
   );
 };

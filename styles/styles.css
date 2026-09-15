@@ -1,3 +1,510 @@
+/* ==========================================================================
+   Design tokens
+   Palette:  https://colorhunt.co/palette/9cb0806187642b5748273338
+   Type:     https://www.designsystems.one/foundations/typography
+   ========================================================================== */
+
+:root {
+  /* --- Palette ---------------------------------------------------------- */
+  --sage: #9cb080;
+  --green: #618764;
+  --forest: #2b5748;
+  --ink: #273338;
+
+  --paper: #f7f8f4;
+  --surface: #ffffff;
+  --ink-muted: rgba(39, 51, 56, 0.72);
+  --ink-subtle: rgba(39, 51, 56, 0.55);
+  --rule: rgba(39, 51, 56, 0.16);
+
+  /* --- Families --------------------------------------------------------- */
+  --font-heading: "Limelight", "Georgia", serif;
+  --font-body: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* --- Type scale (16px anchor) ----------------------------------------- */
+  --text-xs: 0.75rem; /* 12 */
+  --text-sm: 0.875rem; /* 14 */
+  --text-base: 1rem; /* 16 */
+  --text-lg: 1.125rem; /* 18 */
+  --text-xl: 1.25rem; /* 20 */
+  --text-2xl: 1.5rem; /* 24 */
+  --text-3xl: 1.875rem; /* 30 */
+  --text-4xl: 2.25rem; /* 36 */
+  --text-5xl: 3rem; /* 48 */
+  --text-6xl: 3.75rem; /* 60 */
+  --text-7xl: 4.5rem; /* 72 */
+
+  /* --- Leading curves inverse to size ----------------------------------- */
+  --leading-display: 1;
+  --leading-hero: 1.1;
+  --leading-heading: 1.3;
+  --leading-body: 1.6;
+  --leading-caption: 1.5;
+
+  /* --- Tracking --------------------------------------------------------- */
+  --tracking-display: -0.02em;
+  --tracking-hero: -0.015em;
+  --tracking-heading: -0.005em;
+  --tracking-body: 0em;
+  --tracking-caption: 0.02em;
+
+  /* --- Measure ---------------------------------------------------------- */
+  --measure: 65ch;
+}
+
 body > div:first-child {
   overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Base typography — everything resolves to Limelight or PT Sans
+   ========================================================================== */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Argon and Bootstrap both hard-code Open Sans / system stacks in a few
+   hundred places. Reclaim every one of them for the two chosen families. */
+body,
+p,
+input,
+select,
+textarea,
+button,
+label,
+li,
+td,
+th,
+.lead,
+.btn,
+.nav-link,
+.card,
+.card-title,
+.card-body,
+.badge,
+.form-control,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: var(--ink);
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+/* Limelight is a single-weight display face: reserve it for the two largest
+   levels, where its character reads as intent rather than noise. */
+h1,
+.h1,
+.display-1,
+.display-2,
+.display-3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: var(--leading-hero);
+  letter-spacing: var(--tracking-hero);
+}
+
+h2,
+.h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
+/* Sub-heading levels stay in PT Sans Bold — legible at small sizes. */
+h3,
+h4,
+h5,
+h6,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
+h1,
+.h1 {
+  font-size: var(--text-5xl);
+}
+h2,
+.h2 {
+  font-size: var(--text-3xl);
+}
+h3,
+.h3 {
+  font-size: var(--text-2xl);
+}
+h4,
+.h4 {
+  font-size: var(--text-xl);
+}
+h5,
+.h5 {
+  font-size: var(--text-lg);
+}
+h6,
+.h6 {
+  font-size: var(--text-base);
+}
+
+.display-1,
+.display-2 {
+  font-size: clamp(var(--text-4xl), 5vw + 1rem, var(--text-6xl));
+}
+
+.display-3,
+.display-4 {
+  font-size: clamp(var(--text-3xl), 3vw + 1rem, var(--text-4xl));
+}
+
+p {
+  line-height: var(--leading-body);
+}
+
+.lead {
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: var(--leading-body);
+}
+
+small,
+.small,
+.text-caption {
+  font-size: var(--text-sm);
+  line-height: var(--leading-caption);
+  letter-spacing: var(--tracking-caption);
+}
+
+a {
+  color: var(--forest);
+}
+
+a:hover {
+  color: var(--green);
+}
+
+/* ==========================================================================
+   Palette overrides for the inherited Argon components
+   ========================================================================== */
+
+.bg-gradient-info,
+.section-shaped .shape.bg-gradient-info {
+  background: linear-gradient(150deg, var(--forest) 0%, var(--ink) 100%) !important;
+}
+
+.text-info {
+  color: var(--forest) !important;
+}
+
+.text-white,
+.text-white h1,
+.text-white h2 {
+  color: var(--surface) !important;
+}
+
+.fill-white {
+  fill: var(--paper);
+}
+
+.progress-bar,
+.bg-info {
+  background-color: var(--green) !important;
+}
+
+.btn-white {
+  background-color: var(--surface);
+  border-color: var(--surface);
+  color: var(--ink);
+}
+
+.card {
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Minimal navigation
+   ========================================================================== */
+
+.site-nav {
+  background-color: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-nav__inner {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 68rem;
+  padding: 1.5rem 1.5rem;
+}
+
+.site-nav__brand {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  letter-spacing: var(--tracking-heading);
+  line-height: var(--leading-heading);
+  text-decoration: none;
+}
+
+.site-nav__brand:hover {
+  color: var(--forest);
+}
+
+.site-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* The vertical rule between items is the only ornament in the nav. */
+.site-nav__links li + li {
+  border-left: 1px solid var(--rule);
+}
+
+.site-nav__link {
+  color: var(--ink-muted);
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: var(--tracking-caption);
+  line-height: var(--leading-caption);
+  padding: 0 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.15s ease;
+}
+
+.site-nav__link:hover {
+  color: var(--forest);
+  text-decoration: none;
+}
+
+.site-nav__link--active {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Home page
+   ========================================================================== */
+
+.home {
+  margin: 0 auto;
+  max-width: 68rem;
+  padding: clamp(3rem, 10vh, 7rem) 1.5rem 4rem;
+}
+
+.home__title {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-4xl), 6vw + 1rem, var(--text-7xl));
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+  margin-bottom: 1.5rem;
+}
+
+.home__lead {
+  color: var(--ink-muted);
+  font-size: var(--text-lg);
+  line-height: var(--leading-body);
+  max-width: var(--measure);
+}
+
+.home__eyebrow {
+  color: var(--green);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-caption);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.home__rule {
+  background-color: var(--sage);
+  border: 0;
+  height: 2px;
+  margin: 2.5rem 0;
+  width: 4rem;
+}
+
+.home__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.home__action {
+  border: 1px solid var(--forest);
+  color: var(--forest);
+  display: inline-block;
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-caption);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.home__action:hover {
+  background-color: var(--forest);
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.home__action--primary {
+  background-color: var(--forest);
+  color: var(--paper);
+}
+
+.home__action--primary:hover {
+  background-color: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+/* ==========================================================================
+   Page header shared by inner pages
+   ========================================================================== */
+
+.page-header {
+  border-bottom: 1px solid var(--rule);
+  margin: 0 auto;
+  max-width: 68rem;
+  padding: clamp(2.5rem, 7vh, 4.5rem) 1.5rem 2rem;
+}
+
+.page-header__title {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-4xl), 4vw + 1rem, var(--text-5xl));
+  letter-spacing: var(--tracking-hero);
+  line-height: var(--leading-hero);
+  margin-bottom: 0.5rem;
+}
+
+.page-header__lead {
+  color: var(--ink-muted);
+  font-size: var(--text-lg);
+  max-width: var(--measure);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  border-top: 1px solid var(--rule);
+  color: var(--ink-subtle);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-caption);
+  margin: 0 auto;
+  max-width: 68rem;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.site-footer a {
+  color: var(--ink-subtle);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--forest);
+}
+
+/* ==========================================================================
+   Social links
+   ========================================================================== */
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.social-links__item {
+  align-items: center;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  color: var(--forest);
+  display: inline-flex;
+  font-size: var(--text-base);
+  height: 2.75rem;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  width: 2.75rem;
+}
+
+.social-links__item:hover {
+  background-color: var(--forest);
+  border-color: var(--forest);
+  color: var(--paper);
+}
+
+.social-links--on-dark .social-links__item {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: var(--surface);
+}
+
+.social-links--on-dark .social-links__item:hover {
+  background-color: var(--sage);
+  border-color: var(--sage);
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   Inner-page section rhythm — the inherited Argon spacing is far too loose
+   once the shaped hero is gone.
+   ========================================================================== */
+
+.about-sections .section-lg {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.about-sections .section {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.about-sections .my-5 {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
 }

@@ -1,5 +1,9 @@
 import React from "react";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+
+// react-lottie reaches for `window` at import time, so it can only be loaded
+// in the browser.
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 type Props = {
   animationPath: string;

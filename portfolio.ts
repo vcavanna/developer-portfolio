@@ -2,7 +2,6 @@ import emoji from "react-easy-emoji";
 import {
   EducationType,
   ExperienceType,
-  FeedbackType,
   ProjectType,
   SkillsSectionType,
   SkillBarsType,
@@ -223,9 +222,6 @@ export const projects: ProjectType[] = [
     desc: "Developed the backend database and REST API together with frontend and device teams",
     github: "https://github.com/vcavanna/studentAttendanceMiddleware",
   },
-];
-
-export const feedbacks: FeedbackType[] = [
 ];
 
 // See object prototype on /types/section.ts page

@@ -1,44 +1,39 @@
-import dynamic from "next/dynamic";
-const Navigation = dynamic(() => import("../components/Navigation"));
-const Greetings = dynamic(() => import("../containers/Greetings"));
-const Skills = dynamic(() => import("../containers/Skills"));
-const Proficiency = dynamic(() => import("../containers/Proficiency"));
-const Education = dynamic(() => import("../containers/Education"));
-const Experience = dynamic(() => import("../containers/Experience"));
-const Projects = dynamic(() => import("../containers/Projects"));
-const Feedbacks = dynamic(() => import("../containers/Feedbacks"));
-const GithubProfileCard = dynamic(() => import("../components/GithubProfileCard"));
-import { openSource } from "../portfolio";
+import Link from "next/link";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import SEO from "../components/SEO";
-import { GithubUserType } from "../types";
+import { greetings, socialLinks } from "../portfolio";
 
-export default function Home({ githubProfileData }: { githubProfileData: any }) {
+export default function Home() {
   return (
     <div>
       <SEO />
       <Navigation />
-      <Greetings />
-      <Skills />
-      <Proficiency />
-      <Education />
-      <Experience />
-      {/* <Feedbacks /> */}
-      <Projects />
-      <GithubProfileCard {...githubProfileData} />
+      <main className="home">
+        <p className="home__eyebrow">Software Engineer</p>
+        <h1 className="home__title">{greetings.name}</h1>
+        <hr className="home__rule" />
+        <p className="home__lead">{greetings.description}</p>
+        <div className="home__actions">
+          <Link className="home__action home__action--primary" href="/about">
+            About me
+          </Link>
+          <a className="home__action" href="/blog">
+            Read the blog
+          </a>
+          {greetings.resumeLink && (
+            <a className="home__action" href={greetings.resumeLink} rel="noopener noreferrer" target="_blank">
+              Resume
+            </a>
+          )}
+          {socialLinks.email && (
+            <a className="home__action" href={socialLinks.email}>
+              Get in touch
+            </a>
+          )}
+        </div>
+      </main>
+      <Footer />
     </div>
   );
-}
-
-// Home.prototype = {
-//   githubProfileData: PropTypes.object.isRequired,
-// };
-
-export async function getStaticProps() {
-  const githubProfileData: GithubUserType = await fetch(
-    `https://api.github.com/users/${openSource.githubUserName}`
-  ).then(res => res.json());
-
-  return {
-    props: { githubProfileData },
-  };
 }
