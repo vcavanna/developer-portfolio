@@ -40,13 +40,6 @@ export type SkillsSectionType = {
   data: SkillType[];
 };
 
-// * PROFICIENCY SECTION
-
-export type SkillBarsType = {
-  Stack: string;
-  progressPercentage: string;
-};
-
 // * PROJECT SECTION
 
 export type ProjectType = {

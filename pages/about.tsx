@@ -7,7 +7,6 @@ import { greetings, openSource } from "../portfolio";
 import { GithubUserType } from "../types";
 
 const Skills = dynamic(() => import("../containers/Skills"));
-const Proficiency = dynamic(() => import("../containers/Proficiency"));
 const Projects = dynamic(() => import("../containers/Projects"));
 const GithubProfileCard = dynamic(() => import("../components/GithubProfileCard"));
 
@@ -25,7 +24,6 @@ export default function About({ githubProfileData }: { githubProfileData: Github
       </header>
       <main className="about-sections">
         <Skills />
-        <Proficiency />
         <Projects />
         <GithubProfileCard {...githubProfileData} />
       </main>
