@@ -19,7 +19,7 @@ export const greetings: GreetingsType = {
   name: "Vincent Cavanna",
   title: "Hi all, I'm Vincent",
   description:
-    "I'm a software engineer who builds full-stack web applications, mostly around payments, commerce, and the systems that keep them running. Day to day I work in PHP and Laravel, with regular detours into cloud infrastructure, data pipelines, and developer tooling. I care about leaving behind code and documentation that the next engineer can pick up and extend, and I'm always looking for the next thing to learn.",
+    "I'm a software engineer who builds full-stack web applications, mostly around payments, ecommerce, and CRMs. My day to day work is in PHP and Laravel, with regular detours into cloud infrastructure and developer tooling. Aside from my work, I'm interested in Municipal government, real estate, and philosophy, which I write about occasionally in my blog.",
 };
 
 export const openSource = {
@@ -34,7 +34,7 @@ export const socialLinks: SocialLinksType = {
 export const skillsSection: SkillsSectionType = {
   title: "What I do",
   subTitle:
-    "I build full-stack web applications, from payment integrations and APIs down to the cloud infrastructure underneath.",
+    "",
   data: [
     {
       title: "Software Engineering",
@@ -83,32 +83,6 @@ export const skillsSection: SkillsSectionType = {
         {
           skillName: "AWS",
           iconifyTag: "logos:aws",
-        },
-      ],
-    },
-    {
-      title: "Developer Experience & Collaboration",
-      skills: [
-        "Writing documentation and static analysis rules that keep a codebase legible",
-        "Building deployment tooling and CI pipelines that shorten the feedback loop",
-        "Working with stakeholders to scope and migrate business-critical systems",
-      ],
-      softwareSkills: [
-        {
-          skillName: "Documentation",
-          iconifyTag: "oi:copywriting",
-        },
-        {
-          skillName: "GitHub Actions",
-          iconifyTag: "logos:github-actions",
-        },
-        {
-          skillName: "Code Review",
-          iconifyTag: "codicon:feedback",
-        },
-        {
-          skillName: "Collaboration",
-          iconifyTag: "fluent-mdl2:teamwork",
         },
       ],
     },
