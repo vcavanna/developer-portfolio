@@ -10,7 +10,7 @@ module.exports = {
         // The writing lives on Substack; /blog only exists so the nav can
         // point at a first-party path.
         source: "/blog",
-        destination: "https://substack.vincentcavanna.com",
+        destination: "https://vincentcavanna.substack.com",
         permanent: false,
       },
     ];
