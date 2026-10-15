@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import DropCap from "../components/DropCap";
 import SEO from "../components/SEO";
 import { greetings } from "../portfolio";
 
@@ -13,7 +14,9 @@ export default function Home() {
         <p className="home__eyebrow">Software Engineer</p>
         <h1 className="home__title">{greetings.name}</h1>
         <hr className="home__rule" />
-        <p className="home__lead">{greetings.description}</p>
+        <p className="home__lead">
+          <DropCap>{greetings.description}</DropCap>
+        </p>
         <div className="home__actions">
           <Link className="home__action home__action--primary" href="/about">
             About me

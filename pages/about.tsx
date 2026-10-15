@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import DropCap from "../components/DropCap";
 import SEO from "../components/SEO";
 import SocialLinks from "../components/SocialLinks";
 import { greetings, openSource } from "../portfolio";
@@ -17,7 +18,9 @@ export default function About({ githubProfileData }: { githubProfileData: Github
       <Navigation />
       <header className="page-header">
         <h1 className="page-header__title">About</h1>
-        <p className="page-header__lead">{greetings.description}</p>
+        <p className="page-header__lead">
+          <DropCap>{greetings.description}</DropCap>
+        </p>
         <div className="mt-4">
           <SocialLinks />
         </div>

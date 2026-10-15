@@ -508,3 +508,33 @@ a:hover {
   margin-bottom: 0 !important;
   margin-top: 0 !important;
 }
+
+/* ==========================================================================
+   Drop cap — the opening letter of a lead paragraph, held in braces
+   ========================================================================== */
+
+.drop-cap {
+  align-items: center;
+  display: flex;
+  float: left;
+  /* Two lines of the paragraph tall, so the third line wraps back under. */
+  height: 3.2em;
+  line-height: 1;
+  margin: 0 0.5em 0 0;
+}
+
+.drop-cap__brace {
+  color: var(--forest);
+  font-family: var(--font-body);
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.drop-cap__letter {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 2em;
+  line-height: 1;
+  padding: 0 0.2em;
+}
